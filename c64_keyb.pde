@@ -25,6 +25,7 @@
  * OTHER DEALINGS IN THE SOFTWARE.
  *
  */
+#include "key_us_us.h"
 
 #define INP_START 2 /* +0..7 */
 #define INP_END 9
@@ -71,7 +72,10 @@ void loop() {
 			Serial.print(" line ");
 			Serial.print(i - INP_START, DEC);
 			Serial.println();
+                        Serial.print(keymap[scan][i - INP_START]);
+			Serial.println();
 		}
 	}
 	delay(1); /* ~1 khz */
 }
+
